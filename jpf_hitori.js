@@ -47,11 +47,26 @@
 	
 */
 
+var allCells;
 
+window.onload = function startUp(){
+   document.getElementById("puzzleTitle").innerHTML = "Puzzle 1"; 
+   document.getElementById("puzzle").innerHTML = 
+   drawHitori(hitori1Numbers, hitori1Blocks, hitori1Rating);
+   var puzzleButtons = document.getElementsByClassName("puzzles");
+   for(var i = 0; i < puzzleButtons.length; i++){
+      puzzleButtons[i].addEventListener("click", switchPuzzle);
+   }
+   setupPuzzle();
+}
 
-
-
-
+function switchPuzzle(e){
+   var puzzleID = e.target.id;
+   document.getElementById("puzzleTitle").innerHTMl = e.target.id.value;
+   switch(puzzleID){
+      
+   }
+}
 
 
 
